@@ -13,6 +13,11 @@ class BoletaElectronica {
   private $identificadorFirmaSwf = "";
   private $tipDocuEmisorSwf = "";
 
+  private $listaResumen = [];
+
+  public function getlistaResumen(){ return $this->listaResumen; }
+  public function setlistaResumen($val) { $this->listaResumen = $val; }
+
 
   public function getUblVersionIdSwf(){ return $this->ublVersionIdSwf; }
   public function setUblVersionIdSwf($val) { $this->ublVersionIdSwf = $val; }

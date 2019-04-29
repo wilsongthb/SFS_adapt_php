@@ -1,6 +1,7 @@
 <?php
 
-class BoletaElectronica {
+class BoletaElectronica
+{
   private $ublVersionIdSwf = "";
   private $CustomizationIdSwf = "";
   private $idResumen = "";
@@ -15,45 +16,118 @@ class BoletaElectronica {
 
   private $listaResumen = [];
 
-  public function getlistaResumen(){ return $this->listaResumen; }
-  public function setlistaResumen($val) { $this->listaResumen = $val; }
+  public function getlistaResumen()
+  {
+    return $this->listaResumen;
+  }
+  public function setlistaResumen($val)
+  {
+    $this->listaResumen = $val;
+  }
 
 
-  public function getUblVersionIdSwf(){ return $this->ublVersionIdSwf; }
-  public function setUblVersionIdSwf($val) { $this->ublVersionIdSwf = $val; }
+  public function getUblVersionIdSwf()
+  {
+    return $this->ublVersionIdSwf;
+  }
+  public function setUblVersionIdSwf($val)
+  {
+    $this->ublVersionIdSwf = $val;
+  }
 
-  public function getCustomizationIdSwf(){ return $this->CustomizationIdSwf; }
-  public function setCustomizationIdSwf($val) { $this->CustomizationIdSwf = $val; }
+  public function getCustomizationIdSwf()
+  {
+    return $this->CustomizationIdSwf;
+  }
+  public function setCustomizationIdSwf($val)
+  {
+    $this->CustomizationIdSwf = $val;
+  }
 
-  public function getIdResumen(){ return $this->idResumen; }
-  public function setIdResumen($val) { $this->idResumen = $val; }
+  public function getIdResumen()
+  {
+    return $this->idResumen;
+  }
+  public function setIdResumen($val)
+  {
+    $this->idResumen = $val;
+  }
 
-  public function getFechaEmision(){ return $this->fechaEmision; }
-  public function setFechaEmision($val) { $this->fechaEmision = $val; }
+  public function getFechaEmision()
+  {
+    return $this->fechaEmision;
+  }
+  public function setFechaEmision($val)
+  {
+    $this->fechaEmision = $val;
+  }
 
-  public function getFechaResumen(){ return $this->fechaResumen; }
-  public function setFechaResumen($val) { $this->fechaResumen = $val; }
+  public function getFechaResumen()
+  {
+    return $this->fechaResumen;
+  }
+  public function setFechaResumen($val)
+  {
+    $this->fechaResumen = $val;
+  }
 
-  public function getNroRucEmisorSwf(){ return $this->nroRucEmisorSwf; }
-  public function setNroRucEmisorSwf($val) { $this->nroRucEmisorSwf = $val; }
+  public function getNroRucEmisorSwf()
+  {
+    return $this->nroRucEmisorSwf;
+  }
+  public function setNroRucEmisorSwf($val)
+  {
+    $this->nroRucEmisorSwf = $val;
+  }
 
-  public function getIdentificadorFacturadorSwf(){ return $this->identificadorFacturadorSwf; }
-  public function setIdentificadorFacturadorSwf($val) { $this->identificadorFacturadorSwf = $val; }
+  public function getIdentificadorFacturadorSwf()
+  {
+    return $this->identificadorFacturadorSwf;
+  }
+  public function setIdentificadorFacturadorSwf($val)
+  {
+    $this->identificadorFacturadorSwf = $val;
+  }
 
-  public function getNombreComercialSwf(){ return $this->nombreComercialSwf; }
-  public function setNombreComercialSwf($val) { $this->nombreComercialSwf = $val; }
+  public function getNombreComercialSwf()
+  {
+    return $this->nombreComercialSwf;
+  }
+  public function setNombreComercialSwf($val)
+  {
+    $this->nombreComercialSwf = $val;
+  }
 
-  public function getRazonSocialSwf(){ return $this->razonSocialSwf; }
-  public function setRazonSocialSwf($val) { $this->razonSocialSwf = $val; }
+  public function getRazonSocialSwf()
+  {
+    return $this->razonSocialSwf;
+  }
+  public function setRazonSocialSwf($val)
+  {
+    $this->razonSocialSwf = $val;
+  }
 
-  public function getIdentificadorFirmaSwf(){ return $this->identificadorFirmaSwf; }
-  public function setIdentificadorFirmaSwf($val) { $this->identificadorFirmaSwf = $val; }
+  public function getIdentificadorFirmaSwf()
+  {
+    return $this->identificadorFirmaSwf;
+  }
+  public function setIdentificadorFirmaSwf($val)
+  {
+    $this->identificadorFirmaSwf = $val;
+  }
 
-  public function getTipDocuEmisorSwf(){ return $this->tipDocuEmisorSwf; }
-  public function setTipDocuEmisorSwf($val) { $this->tipDocuEmisorSwf = $val; }
+  public function getTipDocuEmisorSwf()
+  {
+    return $this->tipDocuEmisorSwf;
+  }
+  public function setTipDocuEmisorSwf($val)
+  {
+    $this->tipDocuEmisorSwf = $val;
+  }
 
 
-  public function getXML() {
+  public function getXML()
+  {
     $ublVersionIdSwf = $this->ublVersionIdSwf;
     $CustomizationIdSwf = $this->CustomizationIdSwf;
     $idResumen = $this->idResumen;
@@ -120,7 +194,7 @@ class BoletaElectronica {
   </cac:Party>
   </cac:AccountingSupplierParty>
 EOD;
-  
+
     foreach ($this->listaResumen as $key => $value) {
       $linea = $value['linea'];
       $tipDocResumen = $value['tipDocResumen'];
@@ -144,10 +218,7 @@ EOD;
       $monValGratuito = $value['monValGratuito'];
       $totOtroCargo = $value['totOtroCargo'];
       $monTribIsc = $value['monTribIsc'];
-      $monTribIsc = $value['monTribIsc'];
       $monTribIgv = $value['monTribIgv'];
-      $monTribIgv = $value['monTribIgv'];
-      $monTribOtro = $value['monTribOtro'];
       $monTribOtro = $value['monTribOtro'];
 
       $val .= <<<EOD
@@ -159,89 +230,94 @@ EOD;
           <cbc:CustomerAssignedAccountID>$numDocUsuario</cbc:CustomerAssignedAccountID>
           <cbc:AdditionalAccountID>$tipDocUsuario</cbc:AdditionalAccountID>
         </cac:AccountingCustomerParty>
-        <!--  Documento que modifica -->
-      <#if resumen.serDocModifico != "">
+EOD;
+      if ($serDocModifico != "") {
+        $val = <<<EOD
+      <!--  Documento que modifica -->
         <cac:BillingReference>
           <cac:InvoiceDocumentReference>
             <cbc:ID>$serDocModifico-$numDocModifico</cbc:ID>
             <cbc:DocumentTypeCode>$tipDocModifico</cbc:DocumentTypeCode>
           </cac:InvoiceDocumentReference>
         </cac:BillingReference>
-      </#if>
-      
+EOD;
+      }
+
+      if ($tipRegPercepcion != "") {
+        $val = <<<EOD
         <!--  Datos de Percepcion - PER -->
-      <#if resumen.tipRegPercepcion != "">
         <sac:SUNATPerceptionSummaryDocumentReference>
           <sac:SUNATPerceptionSystemCode>$tipRegPercepcion</sac:SUNATPerceptionSystemCode>
           <sac:SUNATPerceptionPercent>$porPercepcion</sac:SUNATPerceptionPercent>
           <cbc:TotalInvoiceAmount currencyID="PEN">$monBasePercepcion</cbc:TotalInvoiceAmount>
           <sac:SUNATTotalCashed currencyID="PEN">$monTotIncPercepcion</sac:SUNATTotalCashed>
           <cbc:TaxableAmount currencyID="PEN">$monPercepcion</cbc:TaxableAmount>
-        </sac:SUNATPerceptionSummaryDocumentReference>	
-      </#if>
+        </sac:SUNATPerceptionSummaryDocumentReference>
+EOD;
+      }
+
+
+      $val .= <<<EOD
       <!-- PER -->
-      
         <cac:Status>
           <cbc:ConditionCode>$tipEstado</cbc:ConditionCode>
         </cac:Status>
         <!--Total Importe Total-->
         <sac:TotalAmount currencyID="$moneda">$totImpCpe</sac:TotalAmount>
-      
+EOD;
+      if ($totValGrabado != '' &&  floatval($totValGrabado) > 0) {
+        $val .= <<<EOD
         <!--Total Venta Operaciones Gravadas - 01 -->
-      <#if resumen.totValGrabado != ''>
-      <#if resumen.totValGrabado?number gt 0>
         <sac:BillingPayment>
           <cbc:PaidAmount currencyID="$moneda">$totValGrabado</cbc:PaidAmount>
           <cbc:InstructionID>01</cbc:InstructionID>
         </sac:BillingPayment>
-      </#if>	
-      </#if>
       <!-- fin 01 -->
-      
+EOD;
+      }
+
+      if ($totValExoneado != '' && floatval($totValExoneado) > 0)
+        $val .= <<<EOD
         <!--Total Venta Operaciones Exoneradas - 02 -->
-      <#if resumen.totValExoneado != ''>
-      <#if resumen.totValExoneado?number gt 0>
         <sac:BillingPayment>
           <cbc:PaidAmount currencyID="$moneda">$totValExoneado</cbc:PaidAmount>
           <cbc:InstructionID>02</cbc:InstructionID>
         </sac:BillingPayment>
-      </#if>	
-      </#if>
       <!-- fin 02 -->
-        
+EOD;
+
+      if ($totValInafecto != '' && floatval($totValInafecto) > 0)
+        $val .= <<<EOD
         <!--Total Venta Operaciones Inafectas - 03 -->
-      <#if resumen.totValInafecto != ''>
-      <#if resumen.totValInafecto?number gt 0>
         <sac:BillingPayment>
           <cbc:PaidAmount currencyID="$moneda">$totValInafecto</cbc:PaidAmount>
           <cbc:InstructionID>03</cbc:InstructionID>
         </sac:BillingPayment>
-      </#if>	
-      </#if>	
       <!-- fin 03 -->
-      
+EOD;
+
+      if ($monValGratuito != '' && floatval($monValGratuito) > 0)
+        $val .= <<<EOD
         <!--Total Venta Operaciones Gratuitas - 05 -->
-      <#if resumen.monValGratuito != ''>
-      <#if resumen.monValGratuito?number gt 0>
         <sac:BillingPayment>
           <cbc:PaidAmount currencyID="$moneda">$monValGratuito</cbc:PaidAmount>
           <cbc:InstructionID>05</cbc:InstructionID>
         </sac:BillingPayment>
-      </#if>	
-      </#if>	
       <!-- fin 05 -->
-      
+EOD;
+
+      if ($totOtroCargo != '' && floatval($totOtroCargo) > 0)
+        $val .= <<<EOD
         <!--Total SUMATORIO OTROS CARGOS - Cargos-->
-      <#if resumen.totOtroCargo != ''>
-      <#if resumen.totOtroCargo?number gt 0>
         <cac:AllowanceCharge>
           <cbc:ChargeIndicator>true</cbc:ChargeIndicator>
           <cbc:Amount currencyID="$moneda">$totOtroCargo</cbc:Amount>
         </cac:AllowanceCharge>
-      </#if>	
-      </#if>	
       <!-- fin Cargos -->
-      
+EOD;
+
+
+      $val .= <<<EOD
         <!-- TOTAL ISC-->
         <cac:TaxTotal>
           <cbc:TaxAmount currencyID="$moneda">$monTribIsc</cbc:TaxAmount>
@@ -294,5 +370,5 @@ EOD;
 
 
     return $val;
-  } 
+  }
 }
